@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-
+#creates json to store chapter data
 def load_data():
     try:
         with open("chapter_data.json", "r") as f:
@@ -22,7 +22,7 @@ def load_data():
             "id": 7987
         }
 
-
+#save data func to json
 def save_data(chapter, chapter_id):
     with open("chapter_data.json", "w") as f:
         json.dump(
