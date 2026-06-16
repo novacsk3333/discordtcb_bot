@@ -86,9 +86,10 @@ async def check_chapter():
 
             print(f"Channel: {channel}")
 
-            if channel:
+             if channel:
                 await channel.send(
-                    f"🚨 New One Piece chapter!\n{url}"
+                    f"🚨 New One Piece chapter!\n{url} <@&INSERT ROLEID> ",
+                    allowed_mentions = discord.AllowedMentions(roles=True)
                 )
 
             save_data(latest_chap, latest_id)
